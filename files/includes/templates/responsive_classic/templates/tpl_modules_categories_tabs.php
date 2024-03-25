@@ -8,7 +8,7 @@
  * @copyright Copyright 2003-2005 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
- * @version $Id: tpl_modules_categories_tabs.php 3395 2011-06-10 21:13:00Z dbltoe $
+ * @version $Id: tpl_modules_categories_tabs.php 2024-03-24 torvista
  * Minor patch applied as pointed out in http://www.zen-cart.com/showthread.php?181612-Category-Tab-Simple-Dropdown-Menu-1-3-9-Support-Thread&p=1088097#post1088097
  * as directed by gjh42
  */
@@ -54,7 +54,7 @@ if (CATEGORIES_TABS_STATUS == '1')
 			echo '<ul>';
 			while (!$products_tab->EOF) 
 			{	
-				$cPath_new=zen_get_path($categories->fields['categories_id']);
+				$cPath_new=zen_get_path($categories_tab->fields['categories_id']);
 				$cPath_new=str_replace('=0_', '=', $cPath_new);
 				echo '<li>'.'<a href="'.zen_href_link(zen_get_info_page($products_tab->fields['products_id']),$cPath_new. '&products_id=' . $products_tab->fields['products_id']) . '">'.$products_tab->fields['products_name'].'</a></li>';
 				$products_tab->MoveNext();
