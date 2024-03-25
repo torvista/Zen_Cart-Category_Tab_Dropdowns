@@ -1,7 +1,7 @@
   Category Tab Simple Dropdown Menu
   Created by Andrew Moore
   Modified by dbltoe 6/2011
-  Version 1.3.9
+  Version 1.5.1
   License http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
 
 --------------------------------------------------------
@@ -32,6 +32,10 @@ Make sure your Category Tab Menu is switched on in Admin:
 --------------------------------------------------------
 
 Version History:
+
+1.5.1
+Applied patch forund here http://www.zen-cart.com/showthread.php?181612-Category-Tab-Simple-Dropdown-Menu-1-3-9-Support-Thread&p=1088097#post1088097
+to allow the Category sidebox to expand when selecting a sub-category from drop down menu. Thanks to gjh42 for his help in pointout this out!
 
 1.3.9
 

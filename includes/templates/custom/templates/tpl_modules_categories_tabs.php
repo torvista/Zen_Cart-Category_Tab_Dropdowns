@@ -9,6 +9,8 @@
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
  * @version $Id: tpl_modules_categories_tabs.php 3395 2011-06-10 21:13:00Z dbltoe $
+ * Minor patch applied as pointed out in http://www.zen-cart.com/showthread.php?181612-Category-Tab-Simple-Dropdown-Menu-1-3-9-Support-Thread&p=1088097#post1088097
+ * as directed by gjh42
  */
 ?>
 <?php
@@ -39,9 +41,7 @@ if (CATEGORIES_TABS_STATUS == '1')
 			echo '<ul>';
 			while (!$subcategories_tab->EOF) 
 			{
-				$cPath_new=zen_get_path($subcategories_tab->fields['categories_id']);
-				$cPath_new=str_replace('=0_', '=', $cPath_new);
-				$cPath_new="cPath=".$subcategories_tab->fields['categories_id'];
+				$cPath_new = "cPath=".zen_get_generated_category_path_rev($subcategories_tab->fields['categories_id']);
 				echo '<li>'.'<a href="' . zen_href_link(FILENAME_DEFAULT, $cPath_new) . '">'.$subcategories_tab->fields['categories_name'].'</a></li>';
 				$subcategories_tab->MoveNext();
 			}
