@@ -8,38 +8,13 @@
  * @copyright Copyright 2003-2005 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
- * @version $Id: tpl_modules_categories_tabs.php 3395 2006-04-08 21:13:00Z ajeh $
+ * @version $Id: tpl_modules_categories_tabs.php 3395 2011-06-10 21:13:00Z dbltoe $
  */
 ?>
-<style type="text/css">
-#navCatTabsDropdown li 
-{
-	float:left;
-	position:relative;
-}
-
-#navCatTabsDropdown * li ul
-{
-	visibility:hidden;
-	position:absolute;
-	padding: 0.5em;
-	z-index: 100;
-}
-
-#navCatTabsDropdown * li:hover ul 
-{
-	visibility:visible;
-	background-color: #ffffff;
-	border: 2px outset;
-	white-space:nowrap;
-}
-</style>
-
 <?php
 if (CATEGORIES_TABS_STATUS == '1') 
 {
 	echo '<div id="navCatTabsWrapper">';
-	echo '<div id="navCatTabs">';
 	echo '<div id="navCatTabsDropdown">';
 	echo '<ul>';
 
@@ -67,7 +42,7 @@ if (CATEGORIES_TABS_STATUS == '1')
 				$cPath_new=zen_get_path($subcategories_tab->fields['categories_id']);
 				$cPath_new=str_replace('=0_', '=', $cPath_new);
 				$cPath_new="cPath=".$subcategories_tab->fields['categories_id'];
-				echo '<li>'.'<a href="' . zen_href_link(FILENAME_DEFAULT, $cPath_new) . '">'.$subcategories_tab->fields['categories_name'].'</a></li><br />';
+				echo '<li>'.'<a href="' . zen_href_link(FILENAME_DEFAULT, $cPath_new) . '">'.$subcategories_tab->fields['categories_name'].'</a></li>';
 				$subcategories_tab->MoveNext();
 			}
 			echo '</ul>';
@@ -81,7 +56,7 @@ if (CATEGORIES_TABS_STATUS == '1')
 			{	
 				$cPath_new=zen_get_path($categories->fields['categories_id']);
 				$cPath_new=str_replace('=0_', '=', $cPath_new);
-				echo '<li>'.'<a href="'.zen_href_link(zen_get_info_page($products_tab->fields['products_id']),$cPath_new. '&products_id=' . $products_tab->fields['products_id']) . '">'.$products_tab->fields['products_name'].'</a></li><br />';
+				echo '<li>'.'<a href="'.zen_href_link(zen_get_info_page($products_tab->fields['products_id']),$cPath_new. '&products_id=' . $products_tab->fields['products_id']) . '">'.$products_tab->fields['products_name'].'</a></li>';
 				$products_tab->MoveNext();
 			}
 			echo '</ul>';
@@ -90,7 +65,6 @@ if (CATEGORIES_TABS_STATUS == '1')
 		$categories_tab->MoveNext();
 	}
 	echo '</ul>';
-	echo '</div>';
 	echo '</div>';
 	echo '</div>';
 }
