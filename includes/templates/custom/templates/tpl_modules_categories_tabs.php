@@ -66,12 +66,13 @@ if (CATEGORIES_TABS_STATUS == '1')
 			{
 				$cPath_new=zen_get_path($subcategories_tab->fields['categories_id']);
 				$cPath_new=str_replace('=0_', '=', $cPath_new);
+				$cPath_new="cPath=".$subcategories_tab->fields['categories_id'];
 				echo '<li>'.'<a href="' . zen_href_link(FILENAME_DEFAULT, $cPath_new) . '">'.$subcategories_tab->fields['categories_name'].'</a></li><br />';
 				$subcategories_tab->MoveNext();
 			}
 			echo '</ul>';
 		}
-		$products_tab_query="SELECT p.`products_id`, pd.`products_name`, pd.`language_id` FROM ".TABLE_PRODUCTS." p, ".TABLE_PRODUCTS_DESCRIPTION." pd WHERE p.`master_categories_id`='".(int)$categories_tab->fields['categories_id']."' AND p.`products_id`=pd.`products_id` AND pd.`language_id`='".(int)$_SESSION['languages_id']."' ORDER BY p.`products_sort_order`;";
+		$products_tab_query="SELECT p.`products_id`, pd.`products_name`, pd.`language_id` FROM ".TABLE_PRODUCTS." p, ".TABLE_PRODUCTS_DESCRIPTION." pd WHERE p.`master_categories_id`='".(int)$categories_tab->fields['categories_id']."' AND p.`products_id`=pd.`products_id` AND p.products_status='1' AND pd.`language_id`='".(int)$_SESSION['languages_id']."' ORDER BY p.`products_sort_order`;";
 		$products_tab=$db->Execute($products_tab_query);
 		if($products_tab->RecordCount()>0)
 		{
