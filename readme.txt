@@ -1,22 +1,24 @@
-Category Tab Dropdowns
+Zen Cart - Category Tab Simple Dropdown Menu
+
 Plugin: https://www.zen-cart.com/downloads.php?do=file&id=1003
-GitHub: https://github.com/torvista/Zen_Cart-Category_Tab_Dropdowns
+GitHub: https://github.com/torvista/Zen_Cart-Category_Tab_Simple_Dropdown_Menu.git
 License http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
 
-Version 2
+Version 1.6
 
-Function
+FUNCTION
 The Category Tab Menu (Admin: Configuration->Layout Settings->Categories-Tabs Menu) displays the top categories as links in a list.
-This mod adds the subcategories to those links.
-It is a single level only so it will display subcategories or products depending on the category content.
-Currently it will NOT list linked products (products that are not in their Master Category ID).
+This mod adds a single-level of subcategories to those links or products depending on the category content.
+It does NOT list linked products (products that are not in their Master Category ID).
+
 --------------------------------------------------------
 DO NOT TEST ANYTHING ON YOUR PRODUCTION SERVER: use your development server.
 --------------------------------------------------------
+
 INSTALL/UPDATE
 1. Uncompress the zip file on your computer.
 
-2. Since responsive_classic SHOULD be unaltered from vanilla, you can test these files here first before duplicating them in your custom template.
+2. Since responsive_classic SHOULD be unaltered from vanilla, you can test these files there first before duplicating them in your custom template.
 Copy 
 /includes/templates/responsive_classic/templates/tpl_modules_categories_tabs.php
 
@@ -27,9 +29,10 @@ If you already have an override copy of the tpl_modules_categories_tabs.php youâ
  Edit as required to fit with your styles.
  
 --------------------------------------------------------
-Version History:
-2.0 torvista
-Fix for responsive_classic as example.
+CHANGELOG
+
+1.6 torvista
+Rejigging of fileset, a bugfix and reworking of readme.
 
 1.5.1 ray-the-otter
 Applied patch found here http://www.zen-cart.com/showthread.php?181612-Category-Tab-Simple-Dropdown-Menu-1-3-9-Support-Thread&p=1088097#post1088097

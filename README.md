@@ -1,2 +1,4 @@
-# Zen_Cart-Category_Tab_Dropdowns
-Add subcategory dropdowns to the Category Tab module
+# Zen Cart - Category Tab Dropdowns
+Add subcategory dropdowns (one level or products) to the top category links of the Category Tab module.
+See the readme.
+
