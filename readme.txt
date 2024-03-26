@@ -1,5 +1,8 @@
 Zen Cart - Category Tab Simple Dropdown Menu
 
+THIS BRANCH module_template, splits the functionality into those modules as per core code, but really it's simpler to put it all in the template file. Left here to not lose the (pointless) work done to achieve this.
+
+
 Plugin: https://www.zen-cart.com/downloads.php?do=file&id=1003
 GitHub: https://github.com/torvista/Zen_Cart-Category_Tab_Simple_Dropdown_Menu.git
 License http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
