@@ -1,7 +1,13 @@
 # Zen Cart - Category Tab Simple Dropdown Menu
 
-This branch splits functionality between module and template.
+Add subcategory dropdowns (one subcategory level or products) to the top category links of the Category Tab module.
+See the readme.txt
 
-Add subcategory dropdowns (one level or products) to the top category links of the Category Tab module.
-See the readme.
+Screenshot of result:
+![image: category tab dropdown](category_tabs_dropdown.gif)
 
+## Branch main
+All code is in the template file.
+
+## Branch module_template
+Code is split between the module and template file as per core code.
